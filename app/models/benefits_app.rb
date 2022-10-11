@@ -1,2 +1,0 @@
-class BenefitsApp < ApplicationRecord
-end
