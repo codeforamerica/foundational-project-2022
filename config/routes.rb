@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  resources :benefits_app
-  root "benefits_app#index"
 
+  root "benefits_apps#index"
+  resources :benefits_apps
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
