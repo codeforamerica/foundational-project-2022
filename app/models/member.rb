@@ -1,3 +1,3 @@
 class Member < ApplicationRecord
-  has_one :benefits_app
+  belongs_to :benefits_app
 end

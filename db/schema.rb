@@ -10,13 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_10_14_162628) do
+ActiveRecord::Schema[7.0].define(version: 2022_10_14_163611) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "benefits_apps", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "address"
+    t.string "phone_number"
+    t.string "email_address"
+    t.date "date_of_submission"
   end
 
   create_table "members", force: :cascade do |t|
@@ -25,10 +29,11 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_14_162628) do
     t.date "birthdate"
     t.boolean "primary_member"
     t.boolean "secondary_member"
+    t.bigint "benefits_app_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "benefits_app_id"
     t.index ["benefits_app_id"], name: "index_members_on_benefits_app_id"
   end
 
+  add_foreign_key "members", "benefits_apps"
 end

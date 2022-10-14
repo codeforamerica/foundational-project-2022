@@ -1,0 +1,15 @@
+current directory: /Users/nnelson@codeforamerica.org/CfA/foundational-project/foundational-project-2022/vendor/bundle/ruby/3.0.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+/Users/nnelson@codeforamerica.org/.rbenv/versions/3.0.4/bin/ruby -I /Users/nnelson@codeforamerica.org/.rbenv/versions/3.0.4/lib/ruby/3.0.0 -r ./siteconf20221013-28795-3kgo7u.rb extconf.rb
+creating Makefile
+
+current directory: /Users/nnelson@codeforamerica.org/CfA/foundational-project/foundational-project-2022/vendor/bundle/ruby/3.0.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make DESTDIR\= clean
+
+current directory: /Users/nnelson@codeforamerica.org/CfA/foundational-project/foundational-project-2022/vendor/bundle/ruby/3.0.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make DESTDIR\=
+compiling websocket_mask.c
+linking shared-object websocket_mask.bundle
+
+current directory: /Users/nnelson@codeforamerica.org/CfA/foundational-project/foundational-project-2022/vendor/bundle/ruby/3.0.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 websocket_mask.bundle ./.gem.20221013-28795-7o4r4h
