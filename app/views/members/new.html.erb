@@ -1,0 +1,15 @@
+<h1>Test</h1>
+
+<%= form_with model: [ @benefits_app, @benefits_app.members.build ] do |form| %>
+  <p>
+    <%= form.label :first_name %><br>
+    <%= form.text_field :first_name %>
+  </p>
+  <p>
+    <%= form.label :last_name %><br>
+    <%= form.text_area :last_name %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>

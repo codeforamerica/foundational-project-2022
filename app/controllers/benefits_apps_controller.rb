@@ -16,7 +16,7 @@ class BenefitsAppsController < ApplicationController
     @benefits_app = BenefitsApp.new(benefits_app_params)
 
     if @benefits_app.save
-      redirect_to action: "index"
+      redirect_to new_benefits_app_member_path(@benefits_app)
     else
       render :new, status: :unprocessable_entity
     end

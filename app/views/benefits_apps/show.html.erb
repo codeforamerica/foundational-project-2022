@@ -1,0 +1,15 @@
+<h1>Bennie App Page</h1>
+
+<%= @benefits_app.address %>
+
+<h2>Members:</h2>
+
+<% @benefits_app.members.each do |member| %>
+  <p>
+    <%= member.first_name %>
+  </p>
+
+  <p>
+    <%= member.last_name %>
+  </p>
+<% end %>
