@@ -3,14 +3,19 @@ class MembersController < ApplicationController
     @members = Member.all
   end
   def new
-    @member = Member.new
+    @benefits_app = BenefitsApp.find(params[:benefits_app_id])
     @member = @benefits_app.members.new
   end
 
+
   def create
     @benefits_app = BenefitsApp.find(params[:benefits_app_id])
+    @members_of_app = Member.all.group_by(&:benefits_app_id)
     @member = @benefits_app.members.create(member_params)
-    redirect_to benefits_app_path(@benefits_app)
+    @benefits_app.update_date_of_submission
+
+
+    redirect_to root_path
 
     # if @member.save
     #   redirect_to @member

@@ -2,6 +2,7 @@ class BenefitsAppsController < ApplicationController
 
   def index
     @benefits_apps = BenefitsApp.all
+
   end
 
   def show
@@ -21,6 +22,8 @@ class BenefitsAppsController < ApplicationController
       render :new, status: :unprocessable_entity
     end
   end
+
+
 
   private
     def benefits_app_params
