@@ -2,6 +2,7 @@ class BenefitsAppsController < ApplicationController
 
   def index
     @benefits_apps = BenefitsApp.all
+
   end
 
   def show
@@ -16,14 +17,16 @@ class BenefitsAppsController < ApplicationController
     @benefits_app = BenefitsApp.new(benefits_app_params)
 
     if @benefits_app.save
-      redirect_to action: "index"
+      redirect_to new_benefits_app_member_path(@benefits_app)
     else
       render :new, status: :unprocessable_entity
     end
   end
 
+
+
   private
     def benefits_app_params
-      params.require(:benefits_app).permit(:address, :phone_number, :email_address)
+      params.require(:benefits_app).permit(:address, :phone_number, :email_address, :benefits_app_id)
     end
 end

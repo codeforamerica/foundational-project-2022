@@ -1,0 +1,31 @@
+<h1>Tell us about yourself</h1>
+
+<%= form_with model: [ @benefits_app, @benefits_app.members.build ] do |form| %>
+  <div>
+    <p>
+      <%= form.label :first_name %><br>
+      <%= form.text_field :first_name %>
+    </p>
+    <p>
+      <%= form.label :last_name %><br>
+      <%= form.text_field :last_name %>
+    </p>
+    <p>
+      <%= form.label :birthdate %><br>
+      <%= form.text_field :birthdate %>
+    </p>
+
+    <%#=@benefits_app.members.count%>
+
+  <%# if@benefits_app.members.count ==0 %>
+      <%#= form.hidden_field :primary_member, :value =>true %>
+      <%#= form.hidden_field :secondary_member, :value =>false %>
+    <%# else %>
+      <%#= form.hidden_field :primary_member, :value =>false %>
+      <%#= form.hidden_field :secondary_member, :value =>true %>
+    <%# end %>
+    <%= form.submit "Submit"%>
+
+  </div>
+<% end %>
+
