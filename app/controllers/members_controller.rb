@@ -14,14 +14,11 @@ class MembersController < ApplicationController
     @member = @benefits_app.members.create(member_params)
     @benefits_app.update_date_of_submission
 
-
-    redirect_to root_path
-
-    # if @member.save
-    #   redirect_to @member
-    # else
-    #   render :new, status: :unprocessable_entity
-    # end
+    if @member.save
+      redirect_to root_path
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   private
