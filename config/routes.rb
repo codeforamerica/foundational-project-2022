@@ -5,6 +5,8 @@ Rails.application.routes.draw do
     resources :members
   end
 
+  patch "benefits/:id/update_date" => "benefits_apps#update_date", :as => "update_date"
+
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

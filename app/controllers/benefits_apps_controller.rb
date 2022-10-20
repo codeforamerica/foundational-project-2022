@@ -1,6 +1,8 @@
 class BenefitsAppsController < ApplicationController
 
   def index
+
+
     @benefits_apps = BenefitsApp.all
 
   end
@@ -23,7 +25,12 @@ class BenefitsAppsController < ApplicationController
     end
   end
 
+  def update_date
+    @benefits_app = BenefitsApp.find(params[:id])
+    @benefits_app.update_date_of_submission
+    redirect_to root_path
 
+  end
 
   private
     def benefits_app_params
