@@ -36,8 +36,21 @@
       <%= form.text_field :birthdate %>
     </p>
 
-    <%= form.submit "Submit"%>
+    <ul>
+      <% @benefits_app.members.each do |member| %>
+        <%= member.first_name %> <%= member.last_name %> <br>
+      <% end %>
+    </ul>
+
+    <%= form.submit "Add Member"%>
   </div>
 <% end %>
+<br>
+<%= form_with(model: @benefits_app, url: update_date_path(@benefits_app) ) do |f| %>
+  <%= f.hidden_field :date_of_submission%>
+  <%= f.submit 'Submit' %>
+<% end %>
+
+
 
 

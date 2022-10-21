@@ -12,14 +12,16 @@ class MembersController < ApplicationController
     @benefits_app = BenefitsApp.find(params[:benefits_app_id])
     @members_of_app = Member.all.group_by(&:benefits_app_id)
     @member = @benefits_app.members.create(member_params)
-    @benefits_app.update_date_of_submission
+
 
     if @member.save
-      redirect_to root_path
+      redirect_to new_benefits_app_member_path
     else
       render :new, status: :unprocessable_entity
     end
   end
+
+
 
   private
   def member_params
