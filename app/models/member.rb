@@ -6,6 +6,8 @@ class Member < ApplicationRecord
   validates :birthdate, :format => { with: /\A\d{2}\/\d{2}\/\d{4}\z/, message: "Please use the date format (mm/dd/yyyy)" }
   validates_presence_of :first_name, :last_name, message: 'This field is required'
 
+  encrypts :ssn, deterministic: true
+
   private
   def member_primary_or_secondary
     if benefits_app.members.count == 0
