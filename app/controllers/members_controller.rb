@@ -21,7 +21,22 @@ class MembersController < ApplicationController
     end
   end
 
+  def edit
+    @benefits_app = BenefitsApp.find(params[:benefits_app_id])
+    @member = @benefits_app.members.find(params[:id])
+  end
 
+  def update
+    @benefits_app = BenefitsApp.find(params[:benefits_app_id])
+    @member = @benefits_app.members.find(params[:id])
+
+    if @member.update(member_params)
+      redirect_to new_benefits_app_member_path
+    else
+      render :edit, status: :unprocessable_entity
+    end
+
+  end
 
   private
   def member_params
