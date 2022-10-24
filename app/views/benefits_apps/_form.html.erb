@@ -1,14 +1,14 @@
 <h1>How can we contact you?</h1>
 
-<%= form_with model: @benefits_app do |form| %>
+<%= form_with model: benefits_app do |form| %>
 
   <%= form.label "What's your address?" %><br>
   <%= form.text_field :address %><br>
   <%= form.label "What's your phone number?" %><br>
   <%= form.text_field :phone_number %><br>
-  <% if @benefits_app.errors.any? %>
+  <% if benefits_app.errors.any? %>
     <ul>
-      <% @benefits_app.errors.messages_for(:email_address).each do |message| %>
+      <% benefits_app.errors.messages_for(:email_address).each do |message| %>
         <li><%= message %></li>
       <% end %>
     </ul>
