@@ -37,7 +37,7 @@
     </p>
 
     <p>
-      <%= form.label :ssn %><br>
+      <%= form.label "What's your social security number?" %><br>
       <%= form.text_field :ssn %>
     </p>
 
@@ -45,7 +45,7 @@
 
       <% @benefits_app.members.each do |mbr| %>
         <% next if mbr.new_record? %>
-        <%= mbr.first_name %> <%= mbr.last_name %> <%= mbr.ssn %>
+        <%= mbr.first_name %> <%= mbr.last_name %>
         <%= link_to "Edit", edit_benefits_app_member_path(mbr.benefits_app, mbr) %>
         <% if mbr.secondary_member %>
           <%= link_to "Delete", [mbr.benefits_app, mbr], data:{turbo_method: :delete} %>

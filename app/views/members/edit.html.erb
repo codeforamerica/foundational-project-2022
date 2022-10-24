@@ -36,6 +36,11 @@
       <%= form.text_field :birthdate %>
     </p>
 
+    <p>
+      <%= form.label "What's your social security number?" %><br>
+      <%= form.text_field :ssn %>
+    </p>
+
     <ul>
 
       <% @benefits_app.members.each do |mbr| %>
