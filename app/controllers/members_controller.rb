@@ -38,6 +38,14 @@ class MembersController < ApplicationController
 
   end
 
+  def destroy
+    @benefits_app = BenefitsApp.find(params[:benefits_app_id])
+    @member = @benefits_app.members.find(params[:id])
+    @member.destroy
+    redirect_to new_benefits_app_member_path, status: :see_other
+
+  end
+
   private
   def member_params
     params.require(:member).permit(:first_name, :last_name, :birthdate, :primary_member, :secondary_member, :benefits_app_id)
