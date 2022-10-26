@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_10_19_221755) do
+ActiveRecord::Schema[7.0].define(version: 2022_10_24_223748) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -32,6 +32,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_19_221755) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "birthdate"
+    t.string "ssn"
     t.index ["benefits_app_id"], name: "index_members_on_benefits_app_id"
   end
 
