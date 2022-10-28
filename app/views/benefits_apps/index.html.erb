@@ -1,26 +1,52 @@
-<h1>Submitted Applications</h1>
+<div class="slab">
+<div class="grid">
+  <div class="grid__item width-five-sixths shift-one-twelfth">
 
-<ul>
-  <% @benefits_apps.each do |app| %>
-    <li>
-      <%= link_to app.id, app %>
-      <% if app.date_of_submission %>
-        <%= app.date_of_submission.strftime("%m/%d/%Y")%>
-      <%end%>
-      <% app.members.each do |member| %>
-        <% if member.primary_member %>
-          <%= member.first_name %>
-          <%= member.last_name %>
+
+    <div class="form-card">
+      <div class="emoji emoji-size-95 emoji--clipboard">
+      </div>
+      <div class="form-card__header">
+        <h1 class="form-card__title">Submitted Applications</h1>
+      </div>
+
+
+        <table class="data-table">
+          <thead>
+          <tr>
+            <th>App Number</th>
+            <th>Date submitted</th>
+            <th>Applicant</th>
+            <th></th>
+          </tr>
+          </thead>
+          <tbody>
+        <% @benefits_apps.each do |app| %>
+            <tr>
+              <td><a href="#" class="link--subtle">link</a></td>
+              <td><% if app.date_of_submission %>
+              <%= app.date_of_submission.strftime("%m/%d/%Y")%>
+            <%end%>
+              </td>
+              <td><% app.members.each do |member| %>
+              <% if member.primary_member %>
+                <%= member.first_name %>
+                <%= member.last_name %>
+              <% end %>
+            <% end %>
+              </td>
+            <td><%= link_to "Edit", edit_benefits_app_path(app) %>
+            <%= link_to "Delete", benefits_app_path(app), data: {turbo_method: :delete} %></td>
+            </tr>
         <% end %>
-      <% end %>
-      <%= link_to "Edit", edit_benefits_app_path(app) %>
-      <%= link_to "Delete", benefits_app_path(app), data: {turbo_method: :delete} %>
-    </li>
-  <% end %>
-</ul>
+          </tbody>
+      </table>
 
-<%= link_to "New Application", new_benefits_app_path %>
-
+      <%= link_to "New Application", new_benefits_app_path, class: "button button--primary"%>
+    </div>
+  </div>
+</div>
+</div>
 <%#= form_with model: @benefits_apps do |form| %>
 <%#= form.label :address %>
 <%#= form.text_field :address %>
