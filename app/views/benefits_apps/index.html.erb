@@ -23,7 +23,7 @@
           <tbody>
         <% @benefits_apps.each do |app| %>
             <tr>
-              <td><a href="#" class="link--subtle">link</a></td>
+              <td class="button--link"><%=link_to app.id, app %></td>
               <td><% if app.date_of_submission %>
               <%= app.date_of_submission.strftime("%m/%d/%Y")%>
             <%end%>
