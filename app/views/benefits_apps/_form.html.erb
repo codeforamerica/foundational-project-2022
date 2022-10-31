@@ -1,21 +1,37 @@
-<h1>How can we contact you?</h1>
+<div class="slab">
+  <div class="grid">
+    <div class="grid__item width-five-sixths shift-one-twelfth">
 
-<%= form_with model: benefits_app do |form| %>
 
-  <%= form.label "What's your address?" %><br>
-  <%= form.text_field :address %><br>
-  <%= form.label "What's your phone number?" %><br>
-  <%= form.text_field :phone_number %><br>
-  <% if benefits_app.errors.any? %>
-    <ul>
-      <% benefits_app.errors.messages_for(:email_address).each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-    </ul>
-  <% end %>
-  <%= form.label "What's your email address?" %><br>
-  <%= form.text_field :email_address %>
-  <div>
-    <%= form.submit "Continue"%>
+      <div class="form-card">
+        <div class="form-group">
+
+
+          <h2>How can we contact you?</h2><br>
+
+          <%= form_with model: benefits_app do |form| %>
+            <p class="form-question">What's your address?</p>
+            <%= form.text_field :address, class: "text-input form-width--name"%>
+            <br><br>
+            <p class="form-question">What's your phone number?</p>
+            <%= form.text_field :phone_number, class: "text-input form-width--name"%>
+            <br><br>
+            <% if benefits_app.errors.any? %>
+              <ul>
+                <% benefits_app.errors.messages_for(:email_address).each do |message| %>
+                  <li><%= message %></li>
+                <% end %>
+              </ul>
+            <% end %>
+            <p class="form-question">What's your email address?</p>
+            <%= form.text_field :email_address, class: "text-input form-width--name"%>
+            <br><br>
+            <%= button_tag class:"button button--big button--primary" do %>
+              Continue<i class="button__icon icon-arrow_forward" aria-hidden="true"></i>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+    </div>
   </div>
-<% end %>
+</div>
