@@ -6,11 +6,11 @@
     <div class="form-card">
       <div class="emoji emoji-size-95 emoji--clipboard">
       </div>
-      <div class="form-card__header">
-        <h1 class="form-card__title">Submitted Applications</h1>
-      </div>
+      <br>
+      <br>
+      <h2 style="font-size: 35px;">Submitted Applications</h2>
 
-
+      <div class="honeycrisp-compact">
         <table class="data-table">
           <thead>
           <tr>
@@ -21,28 +21,29 @@
           </tr>
           </thead>
           <tbody>
-        <% @benefits_apps.each do |app| %>
+          <% @benefits_apps.each do |app| %>
             <tr>
-              <td class="button--link"><%=link_to app.id, app %></td>
+              <td><%=link_to app.id, app %></td>
               <td><% if app.date_of_submission %>
-              <%= app.date_of_submission.strftime("%m/%d/%Y")%>
-            <%end%>
+                  <%= app.date_of_submission.strftime("%m/%d/%Y")%>
+                <%end%>
               </td>
               <td><% app.members.each do |member| %>
-              <% if member.primary_member %>
-                <%= member.first_name %>
-                <%= member.last_name %>
-              <% end %>
-            <% end %>
+                  <% if member.primary_member %>
+                    <%= member.first_name %>
+                    <%= member.last_name %>
+                  <% end %>
+                <% end %>
               </td>
-            <td><%= link_to "Edit", edit_benefits_app_path(app) %>
-            <%= link_to "Delete", benefits_app_path(app), data: {turbo_method: :delete} %></td>
+              <td><%= link_to "Edit", edit_benefits_app_path(app) %>
+                <%= link_to "Delete", benefits_app_path(app), data: {turbo_method: :delete} %></td>
             </tr>
-        <% end %>
+          <% end %>
           </tbody>
-      </table>
-
-      <%= link_to "New Application", new_benefits_app_path, class: "button button--primary"%>
+        </table>
+        <br>
+      </div>
+      <%= link_to "New Application", new_benefits_app_path, class: "button button--big button--primary"%>
     </div>
   </div>
 </div>
