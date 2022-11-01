@@ -1,0 +1,77 @@
+# pack-refs with: peeled fully-peeled sorted 
+2930af15f5f2a75734e34635d8e404c1f0f14be3 refs/heads/add-dependabot-config
+5b6dbec582770c19126b9b7539e1b069c88ca4a6 refs/heads/add-labels
+9d4d8d5bc6ad5623fb10f18a9d687b6f4450cac0 refs/heads/card-taxonomies
+cf8860501236f280cfdfa3c1a3d4101733b944fe refs/heads/checkboxes-with-follow-up
+48fa8321e6997b8dee47fe0ba79f8c61ec9c8595 refs/heads/compact-dropdown-#176151526
+1d21736fd9536e9c292b40e67a426c88f0f63a37 refs/heads/compact-footer
+b5f7bbeb8289a37d84178b6b4c46d0a87c39a6ab refs/heads/compact-text-inputs-#175169443
+f3a95829d5a89fd4471b3c9d32647aabf69c3e95 refs/heads/darken_unselected_tabs_in_tab_bar
+5efff86144174f5ba39c59b40eacad96df7995f1 refs/heads/file-uploader
+6ca7ac98caaa9557d9dcbf7eaafa4f2faabf0fcf refs/heads/fix-documentation-page
+d57e6711bc590a7a69f212c9d60e2c2515040393 refs/heads/help_text_has_wrong_class
+d1aeb1733056405a305782a9b6d9e2395f366020 refs/heads/ie_fixes
+139944d1a241d719159f13ffb35e3e6e21076f76 refs/heads/input-masking-bug-fix
+cb13ab9f16584f0a0a83f3e974b6ab09f440730f refs/heads/main
+ba979df7018a8c2ef38a7095164b35c5cbb09bf7 refs/heads/make-selected-tab-white
+4659b9c5704025c4b49abfb57c8dc803bb91a75a refs/heads/materialicon_update
+e7cd6fef8f54ed91dd7ece6950b3eb8d2016db9f refs/heads/namespace-honeycrisp
+e1f3a18a522a21376fd54728ec55e48160c066a9 refs/heads/new-form-builder
+19329caf56b7c7f720c3b4922077c18c98c20d72 refs/heads/none-of-above-check-box-line-default
+92771d447ed128212a28fe865374775ce830b824 refs/heads/padding-last-elements
+20a37155a68f64306e8deafd9d103865239c83d4 refs/heads/percy-charset
+ed1f185c69153fe7bc18f647e05e8970e2802fdb refs/heads/sidebar-updates
+3d3d1819094dcabe13fddc1033c51911c75b140b refs/heads/test_full_bleed
+a251b77868ff14b9a5b97a097489c56cfd2fd843 refs/heads/testing-layouts
+fd5550365e7f92f7c699a28f6811dea7da9dbc96 refs/heads/unsquish-cfa-logo-183157947
+e53581d6000fda3e62373610c50fb9ccc27928fe refs/heads/update-heading-and-typography
+5b438ad801c9ca05d6ae81e8d9c5ae27c2657a1e refs/heads/update-js-pattern
+1aef3657d4c05b53db6235b9e3107fed1a901369 refs/heads/update-ruby-and-bundler
+d416aba0fe0d18105455060bfc0ae42c357632c4 refs/heads/update_cfa_logo_dark-183157947
+761115df6541d4dce4387826cb5688d32f44298c refs/heads/use_variable_for_white_color
+de492a017033c67ba3b1bfa66ff5132f11a4c72b refs/heads/wip/fix-readd-incrementer
+586ea78baec5bc5e0178b5982ec8ee6679ee3c50 refs/tags/v0.10.0
+9decd32bfbef4dd88068593598bb6b2aab292f5c refs/tags/v0.10.1
+6bc31dafd2d1316153c2cefb3dd16aece8a21b07 refs/tags/v0.10.2
+d8f4051f847bcb857fe93b5484de649708f2ddf1 refs/tags/v0.10.3
+af7cd9db0f25fc593914688a76d64100c5e375b6 refs/tags/v0.10.4
+4c6f873f55704ec34fd518906f131133b290e56a refs/tags/v0.10.5
+22fa49a97e4dfe7af9f5498ee5f5b0808b0b6cda refs/tags/v0.10.6
+22cd291111e0861e2d49fcc497cb5d183864c7b4 refs/tags/v0.10.7
+0de76adebe0c567ad8ca0429e5a8b7bf6bf9682c refs/tags/v0.10.8
+cb13ab9f16584f0a0a83f3e974b6ab09f440730f refs/tags/v0.10.9
+140842d77121b771af1e4e983135aaff4e1d1e93 refs/tags/v0.5.10
+^325badc239c3d7c72d468116136fd3463efd54f9
+3c57158e011b5c9d9f02a073f3b415ec2310feaf refs/tags/v0.5.11
+fda9b72a7e21679cec92ca9004dd76c65f2732cf refs/tags/v0.5.9
+^d6a7c4306e25f877aba72e9660da2dc7beb18139
+f79648118c72c77ae02a446f65c79dc0028d5b7f refs/tags/v0.6.0
+^347a5e6df7fa18cd2c00fb6122d9f21b87f4c52b
+bb475062995c39bf732ef02659b752e98d1bf574 refs/tags/v0.6.1
+^8e79729bc94491251759b0e69c802fcc815494b4
+76434e3697dfa72016c150bad37e2e5a72daeb75 refs/tags/v0.6.2
+^88e931428c2b453a9eff35d202b891e1a99a3554
+671929488635b163a44fde98e9e863f46ae8c9b2 refs/tags/v0.6.4
+^bbb487bad8646225754be535d3342edeffd7cef2
+938405e9a29f961a46fbff4fbcc8a4bbf2b0e8f9 refs/tags/v0.6.5
+^a467d0c0513288687bb1ebf2d612f6ea490b46c5
+d4afa091a4350fa84eb1fa72b746803a40084d46 refs/tags/v0.7.0
+^07d3c98c193070eb3093838a7e15660572954f33
+45addb192b347d91a38dfc2be8b42758bed83e5e refs/tags/v0.7.1
+^0db99c52ce20c6233fe27141d6620f0bcd5f159f
+5e80c99b02fb28b529a1e8fe2afcc17ee74ca44c refs/tags/v0.8.0
+^1af2a2c76b9cd7ae324772585459786639dd6b03
+bfed2c378df34a602e28f2ba61cdd52441e07454 refs/tags/v0.9.0
+^8eefd709bd59789c8d1f72968f223f8818339019
+72c2bbd22eec158db0fd442dac0e115b80931bff refs/tags/v0.9.1
+^8dd7fc9c08d37302f4c56bbe0dbd7494e84eda80
+11b0ba5ccb937beaba597b0e7b5fcf06850aa1c1 refs/tags/v0.9.2
+^86e878b6f47e619307fef1ce43c4cfd7d52478d1
+9c5327cd05842880a1e6f23469de55cedc1de700 refs/tags/v0.9.3
+^8512de6efc64d50c0f468fe8fb8f77d591ad2af3
+03af9759896f9afc7562d21d98f22f39ebf02bb3 refs/tags/v0.9.4
+^a63f0d509ebc46e581002bea7640d1e15e296ab1
+4d1b5f80679f2b56a3f6e0bf977af0ef560cc272 refs/tags/v0.9.5
+^320bff4e9359bf2ba9db7236c85499589b632315
+520aab0f8ef2435a7974ac13870ca66a9b34b436 refs/tags/v0.9.6
+^864c05a5181ab404eb68273f8a1d00e7473da253

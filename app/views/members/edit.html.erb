@@ -1,60 +1,93 @@
-<h1>Tell us about yourself</h1>
+<style>
+    table {
+        border-collapse: separate;
+        border-spacing: 0 15px;
+    }
+</style>
+<div class="slab">
+  <div class="grid">
+    <div class="grid__item width-five-sixths shift-one-twelfth">
 
-<%= form_with(model: @member, url: [ @benefits_app, @member ]) do |form| %>
-  <div>
-    <% if @member.errors.any? %>
-      <ul>
-        <% @member.errors.messages_for(:first_name).each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    <% end %>
-    <p>
-      <%= form.label :first_name %><br>
-      <%= form.text_field :first_name %>
-    </p>
-    <% if @member.errors.any? %>
-      <ul>
-        <% @member.errors.messages_for(:last_name).each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    <% end %>
-    <p>
-      <%= form.label :last_name %><br>
-      <%= form.text_field :last_name %>
-    </p>
-    <% if @member.errors.any? %>
-      <ul>
-        <% @member.errors.messages_for(:birthdate).each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    <% end %>
-    <p>
-      <%= form.label :birthdate %><br>
-      <%= form.text_field :birthdate %>
-    </p>
 
-    <p>
-      <%= form.label "What's your social security number?" %><br>
-      <%= form.text_field :ssn %>
-    </p>
+      <div class="form-card">
+        <div class="form-group">
+          <h2>Tell us about yourself</h2>
+          <br>
+          <%= form_with(model: @member, url: [ @benefits_app, @member ]) do |form| %>
+            <div>
+              <% if @member.errors.any? %>
+                <ul>
+                  <% @member.errors.messages_for(:first_name).each do |message| %>
+                    <li><%= message %></li>
+                  <% end %>
+                </ul>
+              <% end %>
+              <p>
+              <p class="form-question">What's your first name?</p>
+              <%= form.text_field :first_name, class: "text-input form-width--name" %>
+              </p>
+              <% if @member.errors.any? %>
+                <ul>
+                  <% @member.errors.messages_for(:last_name).each do |message| %>
+                    <li><%= message %></li>
+                  <% end %>
+                </ul>
+              <% end %>
+              <p><br>
+              <p class="form-question">What's your last name?</p>
+              <%= form.text_field :last_name, class: "text-input form-width--name" %>
+              </p>
+              <br>
+              <% if @member.errors.any? %>
+                <ul>
+                  <% @member.errors.messages_for(:birthdate).each do |message| %>
+                    <li><%= message %></li>
+                  <% end %>
+                </ul>
+              <% end %>
+              <p>
+              <p class="form-question">What's your birthdate?</p>
+              <%= form.text_field :birthdate, class: "text-input form-width--name" %>
+              </p>
+              <br>
+              <p>
+              <p class="form-question">What's your social security number?</p>
+              <%= form.text_field :ssn, class: "text-input form-width--name" %>
+              </p>
+              <br>
 
-    <ul>
+              <div class="honeycrisp-compact">
+                <table style="width:100%">
+                  <tbody>
+                  <% @benefits_app.members.each do |mbr| %>
+                    <tr>
+                      <% next if mbr.new_record? %>
+                      <td> <%= mbr.first_name %> <%= mbr.last_name %></td>
+                      <td>
+                        <%= link_to "Edit", edit_benefits_app_member_path(mbr.benefits_app, mbr) %> &nbsp
+                        <% if mbr.secondary_member %>
+                          <%= link_to "Delete", [mbr.benefits_app, mbr], data:{turbo_method: :delete} %>
+                        <% end %></td>
+                    </tr>
+                  <% end %>
+                  </tbody>
+                </table>
+              </div>
 
-      <% @benefits_app.members.each do |mbr| %>
-        <% next if mbr.new_record? %>
-        <%= mbr.first_name %> <%= mbr.last_name %>
-        <%= link_to "Edit", edit_benefits_app_member_path(mbr.benefits_app, mbr) %> <br>
-      <% end %>
-    </ul>
-
-    <%= form.submit "Update Member"%>
+              <%= button_tag class:"button button--big" do %>
+                Update Member<i class="button__icon icon-arrow_forward" aria-hidden="true"></i>
+              <% end %>
+            </div>
+          <% end %>
+          <br><br>
+          <%= form_with(model: @benefits_app, url: update_date_path(@benefits_app) ) do |f| %>
+            <%= f.hidden_field :date_of_submission%>
+            <%= button_tag class:"button button--big button--primary" do %>
+              Submit<i class="button__icon icon-arrow_forward" aria-hidden="true"></i>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+    </div>
   </div>
-<% end %>
-<br>
-<%= form_with(model: @benefits_app, url: update_date_path(@benefits_app) ) do |f| %>
-  <%= f.hidden_field :date_of_submission%>
-  <%= f.submit 'Submit' %>
-<% end %>
+</div>
