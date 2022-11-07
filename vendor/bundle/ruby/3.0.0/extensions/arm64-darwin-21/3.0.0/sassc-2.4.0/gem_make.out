@@ -1,5 +1,6 @@
 current directory: /Users/nnelson@codeforamerica.org/CfA/foundational-project/foundational-project-2022/vendor/bundle/ruby/3.0.0/gems/sassc-2.4.0/ext
-/Users/nnelson@codeforamerica.org/.rbenv/versions/3.0.4/bin/ruby -I /Users/nnelson@codeforamerica.org/.rbenv/versions/3.0.4/lib/ruby/3.0.0 -r ./siteconf20221028-25936-tuc6dr.rb extconf.rb
+/Users/nnelson@codeforamerica.org/.rbenv/versions/3.0.4/bin/ruby -I /Users/nnelson@codeforamerica.org/.rbenv/versions/3.0.4/lib/ruby/3.0.0 -r ./siteconf20221107-23171-61drkv.rb extconf.rb
+Ignoring sassc-2.4.0 because its extensions are not built. Try: gem pristine sassc --version 2.4.0
 creating Makefile
 
 current directory: /Users/nnelson@codeforamerica.org/CfA/foundational-project/foundational-project-2022/vendor/bundle/ruby/3.0.0/gems/sassc-2.4.0/ext
@@ -47,6 +48,16 @@ compiling ./libsass/src/fn_strings.cpp
 compiling ./libsass/src/fn_utils.cpp
 compiling ./libsass/src/inspect.cpp
 compiling ./libsass/src/json.cpp
+./libsass/src/json.cpp:1289:3: warning: 'sprintf' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+  sprintf(buf, "%.16g", num);
+  ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/stdio.h:188:1: note: 'sprintf' has been explicitly marked deprecated here
+__deprecated_msg("This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead.")
+^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/cdefs.h:215:48: note: expanded from macro '__deprecated_msg'
+        #define __deprecated_msg(_msg) __attribute__((__deprecated__(_msg)))
+                                                      ^
+1 warning generated.
 compiling ./libsass/src/lexer.cpp
 compiling ./libsass/src/listize.cpp
 compiling ./libsass/src/memory/allocator.cpp
@@ -77,4 +88,4 @@ linking shared-object sassc/libsass.bundle
 
 current directory: /Users/nnelson@codeforamerica.org/CfA/foundational-project/foundational-project-2022/vendor/bundle/ruby/3.0.0/gems/sassc-2.4.0/ext
 make DESTDIR\= install
-/usr/bin/install -c -m 0755 libsass.bundle ./.gem.20221028-25936-12w00k/sassc
+/usr/bin/install -c -m 0755 libsass.bundle ./.gem.20221107-23171-ss5q05/sassc
