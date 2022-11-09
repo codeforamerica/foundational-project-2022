@@ -1,8 +1,8 @@
 require 'rails_helper'
 
+#testing logic for primary and secondary members
 RSpec.describe Member, :type => :model do
   context 'if new member is first member' do
-    # let(:member) {Member.new}
     bennie_app = BenefitsApp.new(email_address: 'some@email.com')
     bennie_app.save
     member = bennie_app.members.create(birthdate: "12/12/2002", first_name: "name", last_name: "last")
@@ -16,3 +16,4 @@ RSpec.describe Member, :type => :model do
     end
   end
 end
+
