@@ -329,10 +329,14 @@ To keep using the current cache store, you can turn off cache versioning entirel
 
     initializer "active_record_encryption.configuration" do |app|
       ActiveRecord::Encryption.configure \
-         primary_key: app.credentials.dig(:active_record_encryption, :primary_key),
-         deterministic_key: app.credentials.dig(:active_record_encryption, :deterministic_key),
-         key_derivation_salt: app.credentials.dig(:active_record_encryption, :key_derivation_salt),
-         **config.active_record.encryption
+         # primary_key: app.credentials.dig(:active_record_encryption, :primary_key),
+         # deterministic_key: app.credentials.dig(:active_record_encryption, :deterministic_key),
+         # key_derivation_salt: app.credentials.dig(:active_record_encryption, :key_derivation_salt),
+         # **config.active_record.encryption
+        config.active_record.encryption.primary_key = ENV['ACTIVE_RECORD_ENCRYPTION_PRIMARY_KEY']
+        config.active_record.encryption.deterministic_key = ENV['ACTIVE_RECORD_ENCRYPTION_DETERMINISTIC_KEY']
+        config.active_record.encryption.key_derivation_salt = ENV['ACTIVE_RECORD_ENCRYPTION_KEY_DERIVATION_SALT']
+
 
       ActiveSupport.on_load(:active_record) do
         # Support extended queries for deterministic attributes and validations
