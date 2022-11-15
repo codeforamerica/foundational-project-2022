@@ -60,7 +60,7 @@ Rails.application.configure do
   config.assets.quiet = true
 
   config.hosts << "app-47822.on-aptible.com"
-
+  
   # Raises error for missing translations.
   # config.i18n.raise_on_missing_translations = true
 
