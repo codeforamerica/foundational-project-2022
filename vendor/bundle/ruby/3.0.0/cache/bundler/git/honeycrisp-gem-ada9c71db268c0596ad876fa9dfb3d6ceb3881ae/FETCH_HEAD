@@ -1,0 +1,59 @@
+2930af15f5f2a75734e34635d8e404c1f0f14be3		branch 'add-dependabot-config' of https://github.com/codeforamerica/honeycrisp-gem
+5b6dbec582770c19126b9b7539e1b069c88ca4a6		branch 'add-labels' of https://github.com/codeforamerica/honeycrisp-gem
+9d4d8d5bc6ad5623fb10f18a9d687b6f4450cac0		branch 'card-taxonomies' of https://github.com/codeforamerica/honeycrisp-gem
+cf8860501236f280cfdfa3c1a3d4101733b944fe		branch 'checkboxes-with-follow-up' of https://github.com/codeforamerica/honeycrisp-gem
+48fa8321e6997b8dee47fe0ba79f8c61ec9c8595		branch 'compact-dropdown-#176151526' of https://github.com/codeforamerica/honeycrisp-gem
+1d21736fd9536e9c292b40e67a426c88f0f63a37		branch 'compact-footer' of https://github.com/codeforamerica/honeycrisp-gem
+b5f7bbeb8289a37d84178b6b4c46d0a87c39a6ab		branch 'compact-text-inputs-#175169443' of https://github.com/codeforamerica/honeycrisp-gem
+f3a95829d5a89fd4471b3c9d32647aabf69c3e95		branch 'darken_unselected_tabs_in_tab_bar' of https://github.com/codeforamerica/honeycrisp-gem
+5efff86144174f5ba39c59b40eacad96df7995f1		branch 'file-uploader' of https://github.com/codeforamerica/honeycrisp-gem
+6ca7ac98caaa9557d9dcbf7eaafa4f2faabf0fcf		branch 'fix-documentation-page' of https://github.com/codeforamerica/honeycrisp-gem
+d57e6711bc590a7a69f212c9d60e2c2515040393		branch 'help_text_has_wrong_class' of https://github.com/codeforamerica/honeycrisp-gem
+d1aeb1733056405a305782a9b6d9e2395f366020		branch 'ie_fixes' of https://github.com/codeforamerica/honeycrisp-gem
+139944d1a241d719159f13ffb35e3e6e21076f76		branch 'input-masking-bug-fix' of https://github.com/codeforamerica/honeycrisp-gem
+cb13ab9f16584f0a0a83f3e974b6ab09f440730f		branch 'main' of https://github.com/codeforamerica/honeycrisp-gem
+ba979df7018a8c2ef38a7095164b35c5cbb09bf7		branch 'make-selected-tab-white' of https://github.com/codeforamerica/honeycrisp-gem
+4659b9c5704025c4b49abfb57c8dc803bb91a75a		branch 'materialicon_update' of https://github.com/codeforamerica/honeycrisp-gem
+e7cd6fef8f54ed91dd7ece6950b3eb8d2016db9f		branch 'namespace-honeycrisp' of https://github.com/codeforamerica/honeycrisp-gem
+e1f3a18a522a21376fd54728ec55e48160c066a9		branch 'new-form-builder' of https://github.com/codeforamerica/honeycrisp-gem
+19329caf56b7c7f720c3b4922077c18c98c20d72		branch 'none-of-above-check-box-line-default' of https://github.com/codeforamerica/honeycrisp-gem
+92771d447ed128212a28fe865374775ce830b824		branch 'padding-last-elements' of https://github.com/codeforamerica/honeycrisp-gem
+20a37155a68f64306e8deafd9d103865239c83d4		branch 'percy-charset' of https://github.com/codeforamerica/honeycrisp-gem
+ed1f185c69153fe7bc18f647e05e8970e2802fdb		branch 'sidebar-updates' of https://github.com/codeforamerica/honeycrisp-gem
+3d3d1819094dcabe13fddc1033c51911c75b140b		branch 'test_full_bleed' of https://github.com/codeforamerica/honeycrisp-gem
+a251b77868ff14b9a5b97a097489c56cfd2fd843		branch 'testing-layouts' of https://github.com/codeforamerica/honeycrisp-gem
+fd5550365e7f92f7c699a28f6811dea7da9dbc96		branch 'unsquish-cfa-logo-183157947' of https://github.com/codeforamerica/honeycrisp-gem
+e53581d6000fda3e62373610c50fb9ccc27928fe		branch 'update-heading-and-typography' of https://github.com/codeforamerica/honeycrisp-gem
+5b438ad801c9ca05d6ae81e8d9c5ae27c2657a1e		branch 'update-js-pattern' of https://github.com/codeforamerica/honeycrisp-gem
+1aef3657d4c05b53db6235b9e3107fed1a901369		branch 'update-ruby-and-bundler' of https://github.com/codeforamerica/honeycrisp-gem
+d416aba0fe0d18105455060bfc0ae42c357632c4		branch 'update_cfa_logo_dark-183157947' of https://github.com/codeforamerica/honeycrisp-gem
+761115df6541d4dce4387826cb5688d32f44298c		branch 'use_variable_for_white_color' of https://github.com/codeforamerica/honeycrisp-gem
+de492a017033c67ba3b1bfa66ff5132f11a4c72b		branch 'wip/fix-readd-incrementer' of https://github.com/codeforamerica/honeycrisp-gem
+586ea78baec5bc5e0178b5982ec8ee6679ee3c50	not-for-merge	tag 'v0.10.0' of https://github.com/codeforamerica/honeycrisp-gem
+9decd32bfbef4dd88068593598bb6b2aab292f5c	not-for-merge	tag 'v0.10.1' of https://github.com/codeforamerica/honeycrisp-gem
+6bc31dafd2d1316153c2cefb3dd16aece8a21b07	not-for-merge	tag 'v0.10.2' of https://github.com/codeforamerica/honeycrisp-gem
+d8f4051f847bcb857fe93b5484de649708f2ddf1	not-for-merge	tag 'v0.10.3' of https://github.com/codeforamerica/honeycrisp-gem
+af7cd9db0f25fc593914688a76d64100c5e375b6	not-for-merge	tag 'v0.10.4' of https://github.com/codeforamerica/honeycrisp-gem
+4c6f873f55704ec34fd518906f131133b290e56a	not-for-merge	tag 'v0.10.5' of https://github.com/codeforamerica/honeycrisp-gem
+22fa49a97e4dfe7af9f5498ee5f5b0808b0b6cda	not-for-merge	tag 'v0.10.6' of https://github.com/codeforamerica/honeycrisp-gem
+22cd291111e0861e2d49fcc497cb5d183864c7b4	not-for-merge	tag 'v0.10.7' of https://github.com/codeforamerica/honeycrisp-gem
+0de76adebe0c567ad8ca0429e5a8b7bf6bf9682c	not-for-merge	tag 'v0.10.8' of https://github.com/codeforamerica/honeycrisp-gem
+cb13ab9f16584f0a0a83f3e974b6ab09f440730f	not-for-merge	tag 'v0.10.9' of https://github.com/codeforamerica/honeycrisp-gem
+140842d77121b771af1e4e983135aaff4e1d1e93	not-for-merge	tag 'v0.5.10' of https://github.com/codeforamerica/honeycrisp-gem
+3c57158e011b5c9d9f02a073f3b415ec2310feaf	not-for-merge	tag 'v0.5.11' of https://github.com/codeforamerica/honeycrisp-gem
+fda9b72a7e21679cec92ca9004dd76c65f2732cf	not-for-merge	tag 'v0.5.9' of https://github.com/codeforamerica/honeycrisp-gem
+f79648118c72c77ae02a446f65c79dc0028d5b7f	not-for-merge	tag 'v0.6.0' of https://github.com/codeforamerica/honeycrisp-gem
+bb475062995c39bf732ef02659b752e98d1bf574	not-for-merge	tag 'v0.6.1' of https://github.com/codeforamerica/honeycrisp-gem
+76434e3697dfa72016c150bad37e2e5a72daeb75	not-for-merge	tag 'v0.6.2' of https://github.com/codeforamerica/honeycrisp-gem
+671929488635b163a44fde98e9e863f46ae8c9b2	not-for-merge	tag 'v0.6.4' of https://github.com/codeforamerica/honeycrisp-gem
+938405e9a29f961a46fbff4fbcc8a4bbf2b0e8f9	not-for-merge	tag 'v0.6.5' of https://github.com/codeforamerica/honeycrisp-gem
+d4afa091a4350fa84eb1fa72b746803a40084d46	not-for-merge	tag 'v0.7.0' of https://github.com/codeforamerica/honeycrisp-gem
+45addb192b347d91a38dfc2be8b42758bed83e5e	not-for-merge	tag 'v0.7.1' of https://github.com/codeforamerica/honeycrisp-gem
+5e80c99b02fb28b529a1e8fe2afcc17ee74ca44c	not-for-merge	tag 'v0.8.0' of https://github.com/codeforamerica/honeycrisp-gem
+bfed2c378df34a602e28f2ba61cdd52441e07454	not-for-merge	tag 'v0.9.0' of https://github.com/codeforamerica/honeycrisp-gem
+72c2bbd22eec158db0fd442dac0e115b80931bff	not-for-merge	tag 'v0.9.1' of https://github.com/codeforamerica/honeycrisp-gem
+11b0ba5ccb937beaba597b0e7b5fcf06850aa1c1	not-for-merge	tag 'v0.9.2' of https://github.com/codeforamerica/honeycrisp-gem
+9c5327cd05842880a1e6f23469de55cedc1de700	not-for-merge	tag 'v0.9.3' of https://github.com/codeforamerica/honeycrisp-gem
+03af9759896f9afc7562d21d98f22f39ebf02bb3	not-for-merge	tag 'v0.9.4' of https://github.com/codeforamerica/honeycrisp-gem
+4d1b5f80679f2b56a3f6e0bf977af0ef560cc272	not-for-merge	tag 'v0.9.5' of https://github.com/codeforamerica/honeycrisp-gem
+520aab0f8ef2435a7974ac13870ca66a9b34b436	not-for-merge	tag 'v0.9.6' of https://github.com/codeforamerica/honeycrisp-gem
