@@ -26,7 +26,7 @@ RUN set -a \
 
 EXPOSE 3000
 
-RUN rails asset:precompile
+RUN rails assets:precompile
 
 CMD ["bundle", "exec", "rails", "s", "-b", "0.0.0.0", "-p", "3000"]
 
