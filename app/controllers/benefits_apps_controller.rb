@@ -41,6 +41,11 @@ class BenefitsAppsController < ApplicationController
 
     redirect_to root_path
   end
+
+  def add_income
+    @benefits_app = BenefitsApp.find(params[:id])
+    redirect_to new_benefits_app_income_path(@benefits_app)
+  end
   def update_date
     @benefits_app = BenefitsApp.find(params[:id])
     @benefits_app.update_date_of_submission
