@@ -12,14 +12,26 @@
           <div class="form-card__body-text">Answer "Yes" if anyone on your application is self-employed.</div>
         </div>
         <div>
-          <%= button_to "Yes", {class: 'button', method: :get}, {action: "income_info"} do %>
+          <%= button_to "Yes", { class: 'button', action: "create" } do %>
             <span class="button__icon--left emoji emoji--inline emoji--checkmark"></span>
             Yes
           <% end %>
-          <%= button_tag class:"button" do %>
+          <%#= link_to "Yes", { class: 'button', method: :get}, {action: "yes" } do %>
+<!--                      <span class="button__icon--left emoji emoji--inline emoji--checkmark"></span>-->
+<!--                      Yes-->
+          <%# end %>
+          <%#= link_to "Yes", yes_path, { class: 'button', method: :get } do %>
+<!--            <span class="button__icon--left emoji emoji--inline emoji--checkmark"></span>-->
+<!--            Yes-->
+          <%# end %>
+          <%= button_to "No", { class:"button" } do %>
             <span class="button__icon--left emoji emoji--inline emoji--crossmark"></span>
             No
           <% end %>
+          <%#= button_tag class:"button" do %>
+<!--            <span class="button__icon--left emoji emoji--inline emoji--crossmark"></span>-->
+<!--            No-->
+          <%# end %>
         </div>
       </div>
     </div>

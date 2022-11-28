@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
   patch "benefits/:id/update_date" => "benefits_apps#update_date", :as => "update_date"
   patch "benefits/:id/add_income" => "benefits_apps#add_income", :as => "add_income"
+  get "benefits_apps/:id/incomes/yes", to: "incomes#yes", :as => "yes"
   mount Cfa::Styleguide::Engine => "/cfa"
 
 
