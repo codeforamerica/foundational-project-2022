@@ -10,7 +10,7 @@ class IncomesController < ApplicationController
     puts "hellooooooooo"
 
     if @income.save
-      redirect_to edit_benefits_app_income_path
+      redirect_to root_path
     else
       render :new, status: :unprocessable_entity
     end
@@ -38,6 +38,6 @@ class IncomesController < ApplicationController
   end
 
   def income_params
-    params.require(:income).permit(:has_income, :income, :income_biweekly, :income_monthly, :total_income)
+    params.require(:income).permit(:pay_period, :has_income, :income, :income_biweekly, :income_monthly, :total_income)
   end
 end

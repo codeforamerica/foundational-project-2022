@@ -1,11 +1,41 @@
+<div class="slab">
+  <div class="grid">
+    <div class="grid__item width-five-sixths shift-one-twelfth">
+      <div class="form-card">
+        <div class="form-card__header">
+          <div class="emoji emoji-size-95 emoji--money">
+          </div>
+          <br>
+          <br>
+          <div class="form-group">
+            <%= form_with(model: @income, url: [ @benefits_app, @income]) do |form| %>
+              <h1 class="form-card__title">How often do you get paid?</h1>
+              <br>
+              <label for="pay_period" class="form-question">How often do you get paid?</label>
+              <div class="select">
+                <select class="select__element" name="pay_period" id="pay_period">
+                  <option selected disabled>Choose a selection</option>
+                  <option value="Biweekly">Biweekly</option>
+                  <option value="Monthly">Monthly</option>
+                </select>
+              </div>
+                <%#= form.select(:pay_period, ['Monthly', 'Biweekly'], :prompt => 'Select a pay period', class: "select select__element")%>
+              <br><br><br>
+              <h2 class="form-card__title">How much money do you get each pay period before taxes?</h2>
+              <br>
+              <div class="form-card__body-text">If this changes with each pay period, average the pay amounts or the last 30 days</div>
+              <br>
+              <%= form.text_field :income, :value => "$#{form.object.income}", class: "text-input form-width--short"%>
+              <br><br>
 
-<h1> Tahsina!!! Please add your nicely made income thing here</h1>
-<div style="display:flex;justify-content:center;align-items:center">
-  <div class="emoji emoji--grinning-face emoji-size-155"></div>
-  <div class="emoji emoji--grinning-face emoji-size-155"></div>
-  <div class="emoji emoji--grinning-face emoji-size-155"></div>
-  <div class="emoji emoji--grinning-face emoji-size-155"></div>
-  <div class="emoji emoji--grinning-face emoji-size-155"></div>
+              <%= button_tag class:"button button--big button--primary" do %>
+                Continue<i class="button__icon icon-arrow_forward" aria-hidden="true"></i>
+              <%end %>
+
+              </div>
+          <%end %>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-
-
