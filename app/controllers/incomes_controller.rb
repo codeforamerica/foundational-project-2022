@@ -20,15 +20,15 @@ class IncomesController < ApplicationController
   def index
 
   end
-  # def show
-  #
-  # end
+  def show
+
+  end
 
   def edit
 
   end
 
-  def yes
+  def income_info
     # redirect_to benefits_app_income_path
   end
 

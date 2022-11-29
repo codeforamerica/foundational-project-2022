@@ -80,12 +80,13 @@
             </div>
           <% end %>
           <br><br>
-          <%= form_with(model: @benefits_app, url: add_income_path(@benefits_app) ) do |f| %>
+          <%= link_to "Continue", add_income_benefits_apps_path(@benefits_app), { class: "button button--big button--primary" } %>
+          <%#= form_with(model: @benefits_app, url: add_income_path(@benefits_app) ) do |f| %>
             <%#= f.hidden_field :date_of_submission%>
-            <%= button_tag class:"button button--big button--primary" do %>
-              Continue<i class="button__icon icon-arrow_forward" aria-hidden="true"></i>
-            <% end %>
-            <% end %>
+            <%#= button_tag class:"button button--big button--primary" do %>
+<!--              Continue<i class="button__icon icon-arrow_forward" aria-hidden="true"></i>-->
+            <%# end %>
+            <%# end %>
         </div>
       </div>
     </div>

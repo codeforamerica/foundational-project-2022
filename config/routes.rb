@@ -9,9 +9,15 @@ Rails.application.routes.draw do
     resources :incomes
   end
 
+  resources :benefits_apps do
+    collection do
+      get "/:id/add_income" => "benefits_apps#add_income", :as => "add_income"
+    end
+  end
+
   patch "benefits/:id/update_date" => "benefits_apps#update_date", :as => "update_date"
-  patch "benefits/:id/add_income" => "benefits_apps#add_income", :as => "add_income"
-  get "benefits_apps/:id/incomes/yes", to: "incomes#yes", :as => "yes"
+  # get "benefits_apps/:id/add_income" => "benefits_apps#add_income", :as => "add_income"
+  get "benefits_apps/:id/incomes/income_info", to: "incomes#income_info", :as => "income_info"
   mount Cfa::Styleguide::Engine => "/cfa"
 
 
