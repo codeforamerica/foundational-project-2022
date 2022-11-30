@@ -33,9 +33,6 @@
                     <%= member.first_name %>
                     <%= member.last_name %>
                   <% end %>
-                  <% app.incomes.each do |income| %>
-                  <% income.pay_period %>
-                  <%end %>
                 <% end %>
               </td>
               <td><%= link_to "Edit", edit_benefits_app_path(app) %>

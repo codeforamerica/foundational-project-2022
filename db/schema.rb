@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_11_29_184202) do
+ActiveRecord::Schema[7.0].define(version: 2022_11_30_000314) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -21,11 +21,12 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_29_184202) do
     t.string "phone_number"
     t.string "email_address"
     t.datetime "date_of_submission"
+    t.boolean "has_income"
   end
 
   create_table "incomes", force: :cascade do |t|
     t.boolean "has_income"
-    t.integer "income"
+    t.string "income"
     t.boolean "income_biweekly"
     t.boolean "income_monthly"
     t.integer "total_income"

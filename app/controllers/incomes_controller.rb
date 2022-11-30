@@ -32,11 +32,6 @@ class IncomesController < ApplicationController
     # redirect_to benefits_app_income_path
   end
 
-  def employed
-    @benefits_app = BenefitsApp.find(params[:benefits_app_id])
-    @income = @benefits_app.incomes.create(income_params)
-  end
-
   def income_params
     params.require(:income).permit(:pay_period, :has_income, :income, :income_biweekly, :income_monthly, :total_income)
   end

@@ -15,7 +15,7 @@ Rails.application.routes.draw do
     end
   end
 
-  patch "benefits/:id/employed" => "benefits_apps#employed", :as => "employed"
+  get "benefits_apps/:id/not_employed" => "benefits_apps#not_employed", :as => "not_employed"
 
   patch "benefits/:id/update_date" => "benefits_apps#update_date", :as => "update_date"
   # get "benefits_apps/:id/add_income" => "benefits_apps#add_income", :as => "add_income"

@@ -1,13 +1,15 @@
 class Income < ApplicationRecord
-  after_create :calculate_total_income
   belongs_to :benefits_app
+  after_create :calculate_total_income
 
   private
   def calculate_total_income
     if self.pay_period == 'Monthly'
-      self.total_income = self.income * 12
+      incomes_int = self.income.to_f
+      self.total_income = incomes_int * 12
     else
-      self.total_income = self.income * 26
+      incomes_int = self.income.to_f
+      self.total_income = incomes_int * 26
     end
   end
 end
