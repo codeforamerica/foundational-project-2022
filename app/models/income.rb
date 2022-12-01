@@ -4,6 +4,7 @@ class Income < ApplicationRecord
 
   private
   def calculate_total_income
+    benefits_app.update(has_income: true)
     if self.pay_period == 'Monthly'
       incomes_int = self.income.to_f
       self.total_income = incomes_int * 12
