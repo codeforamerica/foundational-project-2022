@@ -42,10 +42,14 @@ class BenefitsAppsController < ApplicationController
     redirect_to root_path
   end
 
-  def not_employed
+  def add_income
     @benefits_app = BenefitsApp.find(params[:id])
-    @benefits_app.update_attribute(:has_income, false)
-    redirect_to request.referrer
+    # redirect_to new_benefits_app_income_path(@benefits_app)
+  end
+
+  def not_employed
+    BenefitsApp.find(params[:id]).update!(has_income: false)
+    # redirect_to root_path
   end
   def update_date
     @benefits_app = BenefitsApp.find(params[:id])

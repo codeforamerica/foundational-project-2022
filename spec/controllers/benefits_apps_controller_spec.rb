@@ -22,13 +22,20 @@ describe BenefitsAppsController do
     end
 
   context '#not_employed' do
-    let(:benefits_app){BenefitsApp.create(email_address:'some_email@email.com', id: 1)}
-    before do
-      routes.draw { get "benefits_apps/:id/not_employed" => "benefits_apps#not_employed", :as => "not_employed"}
-    end
+    let!(:benefits_app){BenefitsApp.create!(email_address:'some_email@email.com')}
+    let(:params) { {id: benefits_app.id} }
+
+    # before do
+    #   get :not_employed, params:{id: benefits_app.id}
+    # end
+    render_views
 
     it 'saves has_income to false when No is clicked' do
-      get :benefits_apps/:id/not_employed
+      # assert_routing 'benefits_ap
+      get :add_income, params: params
+      expect(response.body).to have_text "Do you have a job?"
+      # expect(response).to be_ok
+      puts benefits_app.id
       expect(benefits_app.has_income).to eq(false)
     end
   end
