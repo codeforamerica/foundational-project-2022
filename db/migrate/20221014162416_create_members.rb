@@ -5,8 +5,6 @@ class CreateMembers < ActiveRecord::Migration[7.0]
       t.string :last_name
       t.date :birthdate
       t.boolean :primary_member
-      t.boolean :secondary_member
-      t.references :benefits_app, null: false, foreign_key: true
 
       t.timestamps
     end
