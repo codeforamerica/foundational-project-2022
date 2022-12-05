@@ -11,15 +11,11 @@
           <div class="form-card__body-text">Answer "Yes" if anyone on your application is self-employed.</div>
         </div>
         <div>
-          <%= link_to new_benefits_app_income_path(@benefits_app), { class: 'button' } do %>
-            <span class="button__icon--left emoji emoji--inline emoji--checkmark"></span>
-            Yes
-          <% end %>
-          <%= form_with model: @benefits_app do |f| %>
-            <%= f.button :submit, name: "#{f.object_name}[#{method_name}]", value: true, class: "button button--icon button--icon--centered", "aria-describedby": "main-question" do %>
+          <%= form_with model: @benefits_app, url: has_income_path do |f| %>
+            <%= f.button :submit, name: "has_income", value: "yes", class: "button button--icon button--icon--centered" do %>
               <span class="button__icon--left emoji emoji--inline emoji--checkmark"></span><%= "Yes" %>
             <% end %>
-            <%= f.button :submit, name: "#{f.object_name}[#{method_name}]", value: false, class: "button button--icon button--icon--centered", "aria-describedby": "main-question" do %>
+            <%= f.button :submit, name: "has_income", value: "no", class: "button button--icon button--icon--centered" do %>
               <span class="button__icon--left emoji emoji--inline emoji--crossmark"></span><%= "No" %>
             <% end %>
           <% end %>

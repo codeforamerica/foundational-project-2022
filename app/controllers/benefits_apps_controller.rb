@@ -42,37 +42,14 @@ class BenefitsAppsController < ApplicationController
     redirect_to root_path
   end
 
-  def add_income
-    @benefits_app = BenefitsApp.find(params[:id])
-    # redirect_to new_benefits_app_income_path(@benefits_app)
-  end
-
-  def not_employed
-    BenefitsApp.find(params[:id]).update!(has_income: false)
-    # redirect_to root_path
-  end
   def update_date
     @benefits_app = BenefitsApp.find(params[:id])
     @benefits_app.update_date_of_submission
     redirect_to root_path
   end
 
-  # def edit
-  #   @benefits_app = BenefitsApp.find(params[:id])
-  # end
-  #
-  # def update
-  #   @benefits_app = BenefitsApp.find(params[:id])
-  #
-  #   if @benefits_app.update(benefits_app_params)
-  #     redirect_to new_benefits_app_member_path(@benefits_app)
-  #   else
-  #     render :edit, status: :unprocessable_entity
-  #   end
-  # end
-
   private
     def benefits_app_params
-      params.require(:benefits_app).permit(:address, :phone_number, :email_address, :benefits_app_id)
+      params.require(:benefits_app).permit(:address, :phone_number, :email_address, :benefits_app_id, :has_income)
     end
 end

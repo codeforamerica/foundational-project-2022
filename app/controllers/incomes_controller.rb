@@ -7,7 +7,6 @@ class IncomesController < ApplicationController
   def create
     @benefits_app = BenefitsApp.find(params[:benefits_app_id])
     @income = @benefits_app.incomes.create(income_params)
-    puts "hellooooooooo"
 
     if @income.save
       redirect_to root_path
