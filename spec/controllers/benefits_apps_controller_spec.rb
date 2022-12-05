@@ -25,18 +25,26 @@ describe BenefitsAppsController do
     let!(:benefits_app){BenefitsApp.create!(email_address:'some_email@email.com')}
     let(:params) { {id: benefits_app.id} }
 
-    # before do
-    #   get :not_employed, params:{id: benefits_app.id}
-    # end
-    render_views
+    before do
+      get :not_employed, params:{id: benefits_app.id}
+    end
+    # render_views
 
     it 'saves has_income to false when No is clicked' do
       # assert_routing 'benefits_ap
-      get :add_income, params: params
+      # get :add_income, params: params
       expect(response.body).to have_text "Do you have a job?"
       # expect(response).to be_ok
       puts benefits_app.id
       expect(benefits_app.has_income).to eq(false)
     end
+
+    # separate this page into a different controller
+    # has_income_controller
+    # index
+    # update
+
+    # change routing and keeep it in this big controller
+    #test feature spec
   end
 end

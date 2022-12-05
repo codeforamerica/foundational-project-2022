@@ -15,9 +15,13 @@
             <span class="button__icon--left emoji emoji--inline emoji--checkmark"></span>
             Yes
           <% end %>
-          <%= link_to not_employed_benefits_apps_path(@benefits_app), { class:"button" } do %>
-            <span class="button__icon--left emoji emoji--inline emoji--crossmark"></span>
-            No
+          <%= form_with model: @benefits_app do |f| %>
+            <%= f.button :submit, name: "#{f.object_name}[#{method_name}]", value: true, class: "button button--icon button--icon--centered", "aria-describedby": "main-question" do %>
+              <span class="button__icon--left emoji emoji--inline emoji--checkmark"></span><%= "Yes" %>
+            <% end %>
+            <%= f.button :submit, name: "#{f.object_name}[#{method_name}]", value: false, class: "button button--icon button--icon--centered", "aria-describedby": "main-question" do %>
+              <span class="button__icon--left emoji emoji--inline emoji--crossmark"></span><%= "No" %>
+            <% end %>
           <% end %>
         </div>
       </div>
