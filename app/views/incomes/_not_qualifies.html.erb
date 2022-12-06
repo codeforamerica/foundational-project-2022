@@ -1,0 +1,8 @@
+<h2 style="color:red" >Based on your info, you may be over the pre-tax income limit.</h2>
+<div class="form-card__body-text">Your pre-tax income:</div>
+<h2 style="color:red;text-align: center">
+  <%= "$#{@income.total_income}" %>
+</h2>
+<div class="form-card__body-text">You can still apply but might not qualify.</div>
+<br>
+<%= link_to "Apply anyway", root_path, { class: "button button--big" } %>

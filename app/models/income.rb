@@ -1,6 +1,7 @@
 class Income < ApplicationRecord
   belongs_to :benefits_app
   after_create :calculate_total_income
+  after_create :do_you_qualify
 
   private
   def calculate_total_income
@@ -16,9 +17,9 @@ class Income < ApplicationRecord
 
   def do_you_qualify
     if self.total_income < 1000
-      return true
+      self.qualify =  true
     else
-      return false
+      self.qualify =  false
     end
   end
 end
