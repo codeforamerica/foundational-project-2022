@@ -7,7 +7,7 @@ describe SignaturesController do
   context 'signature is entered and submit its pressed' do
     it 'saves signature and reroutes to route page' do
       expect(patch :update, params: params).to redirect_to(root_path)
-      expect(assigns(:benefits_app).signature).to eq('Joe Smith')
+      expect(assigns(:benefits_app).signature).to eq("Joe Smith")
     end
   end
 end

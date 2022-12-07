@@ -16,7 +16,7 @@ class SignaturesController < ApplicationController
 
   private
   def benefits_app_params
-    params.require(:benefits_app).permit(:benefits_app_id, :email_address, :signature)
+    params.permit(:benefits_app_id, :email_address, :signature)
   end
 end
 
