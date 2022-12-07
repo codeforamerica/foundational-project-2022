@@ -12,7 +12,7 @@ class HasIncomesController < ApplicationController
         redirect_to new_benefits_app_income_path(@benefits_app)
       elsif params[:has_income]=="no"
         @benefits_app.update!(has_income: false)
-        redirect_to edit_has_income_path
+        redirect_to edit_signature_path(@benefits_app)
       end
   end
 

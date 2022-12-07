@@ -50,6 +50,6 @@ class BenefitsAppsController < ApplicationController
 
   private
     def benefits_app_params
-      params.require(:benefits_app).permit(:address, :phone_number, :email_address, :benefits_app_id, :has_income)
+      params.require(:benefits_app).permit(:address, :phone_number, :email_address, :benefits_app_id, :has_income, :signature)
     end
 end

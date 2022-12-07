@@ -24,6 +24,7 @@ Rails.application.routes.draw do
 
 
   resources :has_incomes, only:[:edit,:update]
+  resources :signatures, only:[:edit,:update]
   patch "benefits/:id/update_date" => "benefits_apps#update_date", :as => "update_date"
 
   mount Cfa::Styleguide::Engine => "/cfa"

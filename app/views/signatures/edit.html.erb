@@ -1,0 +1,25 @@
+<div class="slab">
+  <div class="grid">
+    <div class="grid__item width-five-sixths shift-one-twelfth">
+      <div class="form-card">
+        <div class="form-card__header">
+          <div class="emoji emoji-size-95 emoji--fountain-pen">
+          </div>
+          <br>
+          <br>
+          <h1 class="form-card__title">Type your full legal name here to sign this application</h1>
+          <div class="form-card__body-text">By entering your name you agree that you want to apply for benefits, that you have been honest on this application, and that you have rad and agreed to the terms on the previous page</div>
+        </div>
+        <div>
+          <%= form_with model: @benefits_app, url: signature_path do |f| %>
+            <%= f.text_field :signature, class: "text-input"%>
+            <br>
+            <%= f.button :submit, class: "button button--big button--primary" do %>
+              <%= "Sign and submit application" %>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
