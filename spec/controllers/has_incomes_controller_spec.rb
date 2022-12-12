@@ -18,7 +18,7 @@ describe HasIncomesController do
     context 'when has_income param is no' do
       let(:has_income) { "no" }
       it 'saves has_income to false and redirects to edit page' do
-        expect(patch :update, params: params).to redirect_to(edit_has_income_path)
+        expect(patch :update, params: params).to redirect_to(edit_signature_path)
         expect(assigns(:benefits_app).has_income).to eq(false)
       end
     end
